@@ -13,6 +13,7 @@ struct KnobView: View {
     var minVal : Double = 0
     var maxVal : Double = 1.0
     
+    //Radius of knob.
     var knobSize : CGFloat = 100
     var color : Color = .white
     
@@ -73,6 +74,7 @@ struct KnobView: View {
                 .fill(Color.accentColor)
                     .frame(width:(10/100)*knobSize,height:(10/100)*knobSize)
                     .offset(x:(knobSize/2)-(10/100)*knobSize,y:0)
+                    //If we don't revert rotation angle, knob will turn opposite direction.
                     .rotationEffect(.degrees(-rotation), anchor: .center)
             }
         .padding()

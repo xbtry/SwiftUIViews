@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var someVal : Double = 0.0
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            KnobView(value: $someVal,maxVal: 100.0)
+            Text("\(someVal)")
         }
-        .padding()
     }
 }
 
